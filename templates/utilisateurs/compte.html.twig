@@ -1,0 +1,72 @@
+{% extends "baseCart.html.twig" %}
+{% block title %}<title>ProTECH | {{app.user.Nom }} {{app.user.Prenom }}</title> {% endblock %}
+{% block body %}
+
+                <!-- Begin Mobile Menu Area -->
+                <div class="mobile-menu-area d-lg-none d-xl-none col-12">
+                    <div class="container"> 
+                        <div class="row">
+                            <div class="mobile-menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu Area End Here -->
+            </header>
+            <!-- Header Area End Here -->
+            <!-- Begin Li's Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="breadcrumb-content">
+                        <ul>
+                            <li><a href="{{path('home')}}">Home</a></li>
+                            <li class="active">Account</li>
+                           </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Breadcrumb Area End Here -->
+            <!-- Begin Login Content Area -->
+            <div class="page-section mb-60">
+                <div class="container">
+                    <div class="row">    
+                                <div class="login-form">
+
+                                    <h5 class="login-title"><a href="{{path("userupdate",{'id':app.user.id}) }}">Update Info</a></h5>
+                                    <h5 class="login-title"><a href="{{path('confirmuser') }}">Or Update Password</a></h5>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-8 col-12 mb-10">
+                                           
+                                            <label>First Name</label>
+                                            <input class="mb-0" type="text" 
+                                            value= {{app.user.Prenom}} readonly>
+                                         </div>
+                                        <div class="col-md-8 col-12 mb-10">
+                                          
+                                            <label>Last Name</label>
+                                            <input class="mb-0" type="text" 
+                                            value= {{app.user.Nom}} readonly>
+                                         
+                                        </div>
+                                        <div class="col-md-8 mb-10">
+                                            <label>Telephone</label>
+                                            <input class="mb-0" type="text" 
+                                            value= {{app.user.Telephone}} readonly>
+                                           
+                                         </div>
+                                        <div class="col-md-8 mb-10">
+                                            <label>Email</label>
+                                            <input class="mb-0" type="text" 
+                                            value= {{app.user.Email}} readonly>
+                                          </div>
+                                         
+                                    </div>
+                                </div>
+                        
+                        </div>
+                   
+                </div>
+            </div>
+            <!-- Login Content Area End Here -->
+         {% endblock %}

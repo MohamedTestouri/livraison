@@ -1,0 +1,74 @@
+{% extends "baseCart.html.twig" %}
+{% block title %}<title>ProTECH|Home</title>{% endblock %}
+
+ {% block body %}  
+<!-- content-wraper start -->
+            <div class="content-wraper">
+                <div class="container">
+                    <div class="row single-product-area">
+                        <div class="col-lg-5 col-md-6">
+                           <!-- Product Details Left -->
+                            <div class="product-details-left">
+                                <div class="product-details-images slider-navigation-1">
+                                    <div class="lg-image">
+                                        <a class="popup-img venobox vbox-item"  data-gall="myGallery">
+                                            <img src="{{asset('uploads/') ~ prod.image }}" alt="product image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-details-thumbs slider-thumbs-1">                                        
+                     
+                                    
+                                </div>
+                            </div>
+                            <!--// Product Details Left -->
+                        </div>
+
+                        <div class="col-lg-7 col-md-6">
+                            <div class="product-details-view-content pt-60">
+                                <div class="product-info">
+                                    <h2>{{prod.nomProduit}}</h2>
+
+                                    <div class="rating-box pt-20">
+                                        <ul class="rating rating-with-review-item">
+                                            <li><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                            <li class="review-item"><a href="#">Read Review</a></li>
+                                            <li class="review-item"><a href="#">Write Review</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="price-box pt-20">
+                                        <span class="new-price new-price-2">{{prod.prixProduit}} DT</span>
+                                    </div>
+                                    <div class="product-desc">
+                                        <p>
+                                            <span>{{prod.descProduit}}</span>
+                                        </p>
+                                    </div>
+
+                                   {# <div class="single-add-to-cart">
+                                    <form action="#" href="{{path('details',{id : bout.id })}}" class="cart-quantity">
+                                     <button class="add-to-cart" type="submit">Consulter Boutique</button>
+                                  </form>
+                                    </div>
+                                  #}
+                                  <div class="single-add-to-cart">
+                                    <div class="cart-quantity">
+                                        <a class="add-to-cart"  href="{{path('details',{id :prod.boutique.id })}}" type="submit">View Shop</a>
+                                      <br>
+                                      <br>
+                                        <a class="add-to-cart" href="{{path("cart_add",{id:prod.id})}}" type="submit">Add Tocart</a>
+                                    </div>
+                                </div>
+                              
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- content-wraper end -->
+ {% endblock %}

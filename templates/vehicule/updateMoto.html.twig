@@ -1,0 +1,70 @@
+{% extends 'baseBack.html.twig' %}
+{% block body %}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Modifier vehicule</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+                {{ form_start(FMoto) }}
+
+                 <div class="card-body">
+                  
+                  
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Matricule </label>
+                    {{ form_widget(FMoto.matricule, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(FMoto.matricule, {'attr': {"class":"mb-0"}}) }}
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Couleur </label>
+                    {{ form_widget(FMoto.couleur, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(FMoto.couleur, {'attr': {"class":"mb-0"}}) }}
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Type Vehicule </label>
+                    {{ form_widget(FMoto.typeVehicule, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(FMoto.typeVehicule, {'attr': {"class":"mb-0"}}) }}
+                  </div>
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Marque </label>
+                    {{ form_widget(FMoto.marque, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(FMoto.marque, {'attr': {"class":"mb-0"}}) }}
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Derrniere Date d'Entretient </label>
+                    {{ form_widget(FMoto.DateEntretient, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(FMoto.DateEntretient, {'attr': {"class":"mb-0"}}) }}
+                  </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                 {{ form_widget(FMoto.Modifier, {'attr': {'class': 'btn btn-primary'}}) }}
+                </div>
+             {{ form_end(FMoto) }}
+            </div>
+            <!-- /.card -->
+
+          
+
+          </div>
+
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+{% endblock %}
